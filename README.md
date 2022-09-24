@@ -1,2 +1,9 @@
-# mapdata
-GeoJSON data for Atlas-created maps
+# Geography
+This repository contains lookup tables used in Atlas products like [EV Hub](https://atlasevhub.com "EV Hub")  and [Buildings Hub](https://atlasbuildingshub.com "Buildings Hub"). Visit [Geography on the EV Hub](https://www.atlasevhub.com/help-center/geography-on-the-ev-hub/ "Geography on the EV Hub") to learn more.
+
+We welcome any contributions to these tables to help improve them!
+
+## Electric Utility-ZIP Code Lookup
+ZIP Codes are the base geography for EV Hub and Buildings Hub. Electric utility territories in the United States are not neatly divided by ZIP Code or many other geographic boundaries. In fact, many electric utilities can operate in the same ZIP Code, such as investor-owned utilities and municipal utilities, each serving different segments of a city. The EV Hub uses a two-step process to make a best approximation of the primary electric utility in each ZIP Code. We rely on data from the U.S. Energy Information Administration ([EIA-860](https://www.eia.gov/electricity/data/eia860/ "EIA-860") and [EIA-861](https://www.eia.gov/electricity/data/eia861/ "EIA-861")), which provides a listing of all electric utilities and counties that they operate in. We also use the [utility-ZIP mapping from OpenEI](https://data.openei.org/submissions/4042 "utility-ZIP mapping from OpenEI"). For each ZIP Code, we first choose the utility defined on OpenEI. If it’s not there, then we fall back on the utility-county lookup data from the U.S. EIA. If more than one utility operates in a ZIP code from OpenEI or a county from the EIA surveys, then we’ll choose the largest utility as measured in megawatt hours served, according to EIA data. The data is updated annually and the mapping of utility to ZIP code can be re-assigned based on the data from OpenEI and EIA.
+
+As a last step in this process, we include a custom override table for ZIP codes using data provided directly by electric utilities in some states.
