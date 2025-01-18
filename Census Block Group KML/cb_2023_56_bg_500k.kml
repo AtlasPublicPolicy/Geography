@@ -12,12 +12,12 @@
 <scale>1.0</scale>
 </LabelStyle>
 <LineStyle>
-<color>ffbc822f</color>
-<width>2</width>
+<color>0828282</color>
+<width>1</width>
 <gx:labelVisibility>0</gx:labelVisibility>
 </LineStyle>
 <PolyStyle>
-<color>7fe1ca9e</color>
+<color>0E6E6E6</color>
 </PolyStyle>
 </Style>
 <Schema name="cb_2023_56_bg_500k" id="kml_schema_ft_cb_2023_56_bg_500k">
